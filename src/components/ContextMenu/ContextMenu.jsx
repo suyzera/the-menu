@@ -1,5 +1,7 @@
-import React, { useState, useEffect } from "react";
-import "./ContextMenu.scss";
+import React, { useState } from "react";
+import { MenuContextContainer } from "./ContextMenuStyle";
+import { Menu } from "./../Menu/Menu";
+
 const ContextMenu = () => {
   const [contextMenuOpened, setContextMenuOpened] = useState(false);
 
@@ -9,12 +11,12 @@ const ContextMenu = () => {
   };
   return (
     <>
-      <div
+      <MenuContextContainer
         data-testid="context-menu"
-        className="contextMenu"
+        className="contextMenuWrapper"
         onContextMenu={(e) => handleContextMenuClick(e)}
-      ></div>
-      {contextMenuOpened && <></>}{" "}
+      ></MenuContextContainer>
+      {contextMenuOpened && <Menu></Menu>}
     </>
   );
 };
