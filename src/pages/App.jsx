@@ -1,10 +1,6 @@
 import ContextMenu from "../components/ContextMenu/ContextMenu";
 function App() {
-  return (
-    <div data-testid="test-app">
-      <ContextMenu></ContextMenu>;
-    </div>
-  );
+  return <ContextMenu></ContextMenu>;
 }
 
 export default App;

@@ -14,7 +14,7 @@ const ContextMenu = () => {
         className="contextMenu"
         onContextMenu={(e) => handleContextMenuClick(e)}
       ></div>
-      ( contextMenuOpened && ( <></>) )
+      {contextMenuOpened && <></>}{" "}
     </>
   );
 };
